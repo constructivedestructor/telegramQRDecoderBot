@@ -87,8 +87,8 @@ def autoIncomeLink():
     img = cv2.imread("income.jpg")
     detector = cv2.QRCodeDetector()
     data, points, straight_qrcode = detector.detectAndDecode(img)
-    source = open('source_pic.jpg', 'rb')
     for id in id_list:
+        source = open('source_pic.jpg', 'rb')
         bot.send_photo(id, source)
         bot.send_message(id, "Link 1: " + data)
 
@@ -101,8 +101,8 @@ def autoOutcomeLink():
     img = cv2.imread("outcome.jpg")
     detector = cv2.QRCodeDetector()
     data, points, straight_qrcode = detector.detectAndDecode(img)
-    source = open('source_pic.jpg', 'rb')
     for id in id_list:
+        source = open('source_pic.jpg', 'rb')
         bot.send_photo(id, source)
         bot.send_message(id, "Link 2: " + data)
 
