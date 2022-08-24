@@ -123,9 +123,9 @@ class ScheduleMessage():
 
 
 if __name__ == '__main__':
+    ScheduleMessage.start_process()
     for i in range(0, 1):
         while True:
-            ScheduleMessage.start_process()
             try:
                 bot.polling(none_stop=True, interval=0)
             except:
